@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kreuzvorwerk</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="stylesheet" href="css/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+	<style>
+		.bg-video {
+		   position: absolute;
+		   top: 0;
+		   left: 0;
+		   width: 100%;
+		   height: 100%;
+		   overflow: auto;
+		}
+		.bg-video__content {
+		   position: absolute;
+		   object-fit: cover;
+		   top: 0;
+		   left: 0;
+		   width: 100%;
+		   height: 100%;
+		}
+		.frame-container {
+		   position: relative;
+		}
+		
+		.frame-container iframe {
+			-webkit-transition:opacity 1000ms ease;
+			opacity: 0.9 !important;
+			background: #ecf0f1;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+  </head>
+	<body class="bg-yellow-300 font-sans leading-normal tracking-normal">
+		<div class="relative flex items-center object-cover justify-center h-screen"> 
+			<video class="bg-video__content" autoplay muted loop>
+				<source src="video/background_1.mp4" type="video/mp4">
+			</video>
+			<div class="frame-container w-full lg:w-3/5 h-full">
+				<iframe src="https://embed.styledcalendar.com/#agoFLSAMME3SuPCpbBbP" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+				<script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>			
+			</div>
+		</div> 
+	</body>
+
+</html>
